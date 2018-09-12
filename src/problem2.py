@@ -2,8 +2,8 @@
 PRACTICE Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Jeremy Roy.
+"""  # TODOne: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -31,7 +31,7 @@ import rosegraphics as rg
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_problem2a()
-    run_test_problem2b()
+    # run_test_problem2b()
 
 
 def run_test_problem2a():
@@ -102,7 +102,7 @@ def problem2a(circle, rectangle, window):
       :type window:    rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # TODOne: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -110,6 +110,19 @@ def problem2a(circle, rectangle, window):
     #    DIFFICULTY:      6
     #    TIME ESTIMATE:   10 to 15 minutes.
     # ------------------------------------------------------------------
+    x = rectangle.get_upper_right_corner()
+    y = rectangle.get_lower_left_corner()
+    circle.attach_to(window)
+    rectangle.attach_to(window)
+    window.render(1)
+    window.continue_on_mouse_click()
+    line = rg.Line(x, y)
+    line.attach_to(window)
+    window.render(1)
+    window.continue_on_mouse_click()
+    circle.fill_color = rectangle.outline_color
+    window.render(1)
+
 
 def run_test_problem2b():
     """ Tests the  problem2b   function. """
