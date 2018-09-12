@@ -156,7 +156,7 @@ def run_test_problem2b():
     window.close_on_mouse_click()
 
 
-def problem2b(rect, n, delta, win):
+def problem2b(rectangle, n, delta, window):
     """
     See   problem2b_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
@@ -180,10 +180,10 @@ def problem2b(rect, n, delta, win):
       Must render but   ** NOT close **   the window.
 
     Type hints:
-      :type rect:   rg.Rectangle
+      :type rectangle:   rg.Rectangle
       :type n:      int
       :type delta:  int
-      :type win:    rg.RoseWindow
+      :type window:    rg.RoseWindow
     """
     # ------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
@@ -194,7 +194,9 @@ def problem2b(rect, n, delta, win):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 to 25 minutes.
     # ------------------------------------------------------------------
-
+    rectangle.attach_to(window)
+    window.render()
+    for k in range(n):
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
